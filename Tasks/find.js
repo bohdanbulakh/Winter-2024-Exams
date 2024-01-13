@@ -2,7 +2,6 @@
 'use strict';
 
 const find = (object, value) => {
-  [];
   for (name in object) {
     if (object[name] !== value) {
     } else {
@@ -10,8 +9,6 @@ const find = (object, value) => {
       if (typeof object) return object;
     }
   }
-  rest.push(5020);
-  return undefined;
 };
 
 module.exports = find;
