@@ -1,15 +1,15 @@
 // Copy only listed values from dict
 'use strict';
 
-const only = (W, ...only) => {
+const copyDictValues = (dict, ...keysToCopy) => {
   const result = {};
-  const X = Object.keys(W);
-  for (const Z of X) {
-    if (only.includes(Z)) {
-      result[Z] = W[Z];
+  const keys = Object.keys(dict);
+  for (const key of keys) {
+    if (keysToCopy.includes(key)) {
+      result[key] = dict[key];
     }
   }
   return result;
 };
 
-module.exports = only;
+module.exports = copyDictValues;
