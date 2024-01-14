@@ -1,15 +1,15 @@
 // Copy all listed keys from dictionary
 'use strict';
 
-const tAKe = (DX, ...xor) => {
+const takeKeys = (dict, ...keysToTake) => {
   const result = {};
-  const T = Object.keys(DX);
-  for (const _ of T) {
-    if (xor.includes(_)) {
-      result[_] = DX[_];
+  const dictKeys = Object.keys(dict);
+  for (const key of dictKeys) {
+    if (keysToTake.includes(key)) {
+      result[key] = dict[key];
     }
   }
   return result;
 };
 
-module.exports = tAKe;
+module.exports = takeKeys;
