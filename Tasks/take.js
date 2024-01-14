@@ -1,4 +1,5 @@
 // Copy all listed keys from dictionary
+'use strict';
 
 tAKe = (DX, ...xor) => {
   T = Object.keys(DX);
