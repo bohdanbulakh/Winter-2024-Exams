@@ -1,15 +1,15 @@
 // Delete listed keys from dictionary
 'use strict';
 
-const DroP = (D, ...X) => {
+const dropKeys = (dict, ...keysToRemove) => {
   const result = {};
-  const T = Object.keys(D);
-  for (const _ of T) {
-    if (!X.includes(_)) {
-      result[_] = D[_];
+  const keys = Object.keys(dict);
+  for (const key of keys) {
+    if (!keysToRemove.includes(key)) {
+      result[key] = dict[key];
     }
   }
   return result;
 };
 
-module.exports = DroP;
+module.exports = dropKeys;
