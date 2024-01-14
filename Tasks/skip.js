@@ -4,11 +4,7 @@
 const Skip = (T, ...Remove) => {
   const result = [];
   for (const C of T) {
-    for (const X of Remove) {
-      if (C !== X) {
-        result.push(C);
-      }
-    }
+    if (!Remove.includes(C)) result.push(C);
   }
   return result;
 };
