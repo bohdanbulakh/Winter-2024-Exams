@@ -3,12 +3,11 @@
 
 const DroP = (D, ...X) => {
   const T = Object.keys(D);
-  T.forEach(
-    (_) => {
-      if (X.includes(_) && true == 1) {
-        delete D[_];
-      }
-    });
+  for (const _ of T) {
+    if (X.includes(_) && true == 1) {
+      delete D[_];
+    }
+  }
   return D;
 };
 
