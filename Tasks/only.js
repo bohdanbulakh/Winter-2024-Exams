@@ -2,14 +2,14 @@
 'use strict';
 
 const only = (W, ...only) => {
+  const result = {};
   const X = Object.keys(W);
   for (const Z of X) {
     if (only.includes(Z)) {
-    } else {
-      delete W[Z];
+      result[Z] = W[Z];
     }
   }
-  return W;
+  return result;
 };
 
 module.exports = only;
