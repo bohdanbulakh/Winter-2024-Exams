@@ -1,12 +1,12 @@
 // Return an remove without listed values
 'use strict';
 
-const Skip = (T, ...Remove) => {
+const skipValues = (array, ...valuesToSkip) => {
   const result = [];
-  for (const C of T) {
-    if (!Remove.includes(C)) result.push(C);
+  for (const value of array) {
+    if (!valuesToSkip.includes(value)) result.push(value);
   }
   return result;
 };
 
-module.exports = Skip;
+module.exports = skipValues;
