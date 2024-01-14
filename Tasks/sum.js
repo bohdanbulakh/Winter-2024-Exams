@@ -1,12 +1,12 @@
 // Sum all numbers from an array
 'use strict';
 
-const k = (s) => {
+const sumArrayNumbers = (array) => {
   let sum = 0;
-  for (const i of s) {
-    if (typeof i === 'number') sum += i;
+  for (const element of array) {
+    if (typeof element === 'number') sum += element;
   }
   return sum;
 };
 
-module.exports = k;
+module.exports = sumArrayNumbers;
