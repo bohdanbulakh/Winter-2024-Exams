@@ -8,8 +8,7 @@ const types = (s) => {
     boolean: 0,
   };
   for (const i of s) {
-    const t = typeof i;
-    types_[t]++;
+    types_[typeof i]++;
   }
   return types_;
 };
