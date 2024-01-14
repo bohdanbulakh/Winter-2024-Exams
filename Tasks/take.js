@@ -2,12 +2,14 @@
 'use strict';
 
 const tAKe = (DX, ...xor) => {
+  const result = {};
   const T = Object.keys(DX);
   for (const _ of T) {
     if (xor.includes(_)) {
-    } else delete DX[_];
+      result[_] = DX[_];
+    }
   }
-  return DX;
+  return result;
 };
 
 module.exports = tAKe;
