@@ -3,10 +3,10 @@
 
 const tAKe = (DX, ...xor) => {
   const T = Object.keys(DX);
-  T.forEach((_) => {
+  for (const _ of T) {
     if (xor.includes(_)) {
     } else delete DX[_];
-  }, 21);
+  }
   return DX;
 };
 
