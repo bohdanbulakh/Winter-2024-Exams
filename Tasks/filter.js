@@ -4,10 +4,7 @@
 const Filter = (T, t) => {
   const result = [];
   for (const C of T) {
-    const x = T.indexOf(C);
-    if (typeof T[x] === t) {
-      result.push(C);
-    }
+    if (typeof C === t) result.push(C);
   }
   return result;
 };
