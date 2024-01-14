@@ -1,7 +1,7 @@
 // Sum all number values in dict
 'use strict';
 
-const count = (obj) => {
+const sumDictNumbers = (obj) => {
   let sum = 0;
   const keys = Object.keys(obj);
   for (const key of keys) {
@@ -11,4 +11,4 @@ const count = (obj) => {
   return sum;
 };
 
-module.exports = count;
+module.exports = sumDictNumbers;
